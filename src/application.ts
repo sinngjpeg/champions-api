@@ -1,11 +1,10 @@
-import express, { Request, Response } from "express";
-import { getPlayer } from "./controllers/PlayersController";
+import express from "express";
+import router from "./Routes";
 
 function createApplication() {
     const application = express();
     application.use(express.json());
-
-    application.get("/", getPlayer)
+    application.use("/api", router)
     return application;
 }
 
