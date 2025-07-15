@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
+import { getPlayerService } from "../services/PlayersService";
 
 
-export const getPlayer = (request: Request, response: Response) =>{
-    response.status(200).json({player: "messi"});
+export const getPlayer = async(request: Request, response: Response) =>{
+    const data = await getPlayerService();
+    response.status(200).json(data);
 };
