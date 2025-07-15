@@ -1,5 +1,5 @@
 import { PlayerModel } from "../models/PlayerModel";
-import { StatisticsModel } from "../models/StatisticsModel.ts";
+import { StatisticsModel } from "../models/StatisticsModel";
 import * as PlayerRepostory from "../repositories/PlayersRepository";
 import * as HttpResponse from "../utils/HttpHelper";
 

@@ -1,5 +1,5 @@
 import { PlayerModel } from "../models/PlayerModel";
-import { StatisticsModel } from "../models/StatisticsModel.ts";
+import { StatisticsModel } from "../models/StatisticsModel";
 
 const database: PlayerModel[] = [
   {
