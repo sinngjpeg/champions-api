@@ -1,3 +1,15 @@
-export const getPlayerService = async () =>{
-    return {player: "ingrid"};
+import * as PlayerRepository  from "../repositories/PlayersRepository";
+import { noContent, ok } from "../utils/HttpHelper";
+
+export const getPlayerService = async () => {
+    const data = await PlayerRepository.findAllPlayers();
+    let response = null
+
+    if (data) {
+        response = await ok(data);
+    } else {
+        response = await noContent();
+    }
+
+    return response;
 }
