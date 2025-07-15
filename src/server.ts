@@ -1,17 +1,10 @@
-import express, {Request, Response} from "express";
+import express, { Request, Response} from "express";
+import createApplication from "./application";
 
-
-const app = express();
+const application = createApplication();
 const port = process.env.PORT;
 
-app.use(express.json());
-
-app.get("/", (request: Request, response: Response) => {
-    response.status(200).json("Hello World!");
-});
-
-
-app.listen(port, ()=> {
+application.listen(port, ()=> {
     console.log(`Server running at port http://localhost:${port}`)
 });
 
