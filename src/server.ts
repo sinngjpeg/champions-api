@@ -1,5 +1,5 @@
 import express, { Request, Response} from "express";
-import createApplication from "./application";
+import createApplication from "./Application.ts";
 
 const application = createApplication();
 const port = process.env.PORT;
